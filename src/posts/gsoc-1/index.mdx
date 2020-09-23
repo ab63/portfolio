@@ -1,0 +1,27 @@
+---
+title: GSoC'20 with KDE
+subtitle: Part 1
+tags: [KDE, GSoC]
+date: 2020-06-29
+---
+
+With the first month of the coding period almost over, I have been working on completing the first part of my GSoC project.
+
+I have been porting [kde.org](https://kde.org) to hugo. The website is very old and has lots and lots of pages. It is even older than me! I have been working on porting these pages to markdown removing the old PHP syntax and adding improvements to the design, responsiveness and accessibility of the website.
+
+I have completed porting the announcements upto the year 2013. I ported the year 2014 as well but I replaced the formatted links into normal ones but I didn't realise It would break the translations for the pages. So I may have to port these announcements again :( . KDE provides a pot file to its translators and they provide translations in a po file in return. We use a custom extraction script to extract the strings to be translated from the markdown files. The translator is smart enough to ignore some changes to the strings but the changes to the links that I made would break it. It also doesn't work well with HTML that isn't inline. I will keep these things in mind in the future.
+
+I am also working on automating (RegEx is Awesome!) much of the work involved in porting these files which may make up for the time lost.
+
+## About my Project
+
+The project involves improving KDE Web Infrastructure. KDE has a lot of websites and some of them like the [main website](https://kde.org) could use an update.
+
+The first part of the project involves porting kde.org to use [Hugo](https://gohugo.io/)- A go based static site generator.
+kde.org is very old and thus contains a lot of pages. This project would involve porting most of the pages to markdown so as to make the website faster and easier to develop.
+
+The second part of the project involves updating [Season of KDE](https://season.kde.org) website. The goal is to use more modern tooling and add some new features. This project is a part of the transition of KDE websites from LDAP to OAuth based authentication. OAuth is a much more modern approach to authentication and would solve some headaches with the current authentication system.
+
+Current Working Repository: [kde.org repo](https://invent.kde.org/websites/kde-org/-/tree/hugo)
+
+If you would to join in, Say Hi at #kde-www on irc or [telegram](https://t.me/KDEWeb).
